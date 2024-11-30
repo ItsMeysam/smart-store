@@ -2,7 +2,5 @@ from django.shortcuts import render
 from django.views.generic import View
 
 
-
-# productView class for show product page
-class ProductView(View):
-    template_name = 'product_module/product_view.html'
+def product_page_view(request):
+    return render(request, 'product_module/product_page_view.html')

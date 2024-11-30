@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home_module',
     'product_module',
+    # external install:
+    'django_render_partial'
 ]
 
 MIDDLEWARE = [

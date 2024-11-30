@@ -1,0 +1,19 @@
+{% load render_partial %}
+
+<!DOCTYPE HTML>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {% include 'shared/header_references.html' %}
+</head>
+<body>
+    {% render_partial 'home_module.views.site_header_component' %}
+    {% block content %}{% endblock %}
+    {% render_partial 'home_module.views.site_footer_component' %}
+    {% include 'shared/footer_references.html' %}
+
+</body>
+</html>
+
+
