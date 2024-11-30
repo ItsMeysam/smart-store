@@ -1,0 +1,680 @@
+{% block content %}
+
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<head>
+<title>مرجع تخصصی برنامه نویسان</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/slider.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/menu.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="js/script.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/nav-hover.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+  $(document).ready(function($){
+    $('#dc_mega-menu-orange').dcMegaMenu({rowItems:'4',speed:'fast',effect:'fade'});
+  });
+</script>
+</head>
+<body>
+  <div class="wrap">
+	<div class="header">
+		<div class="header_top">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="" /></a>
+			</div>
+			  <div class="header_top_left">
+			    <div class="search_box">
+				      <form>
+				    	<input type="text" value="
+جستجوی محصولات
+" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit" value="جستجو">
+				    </form>
+			    </div>
+			    <div class="shopping_cart">
+					<div class="cart">
+						<a href="#" title="View my shopping cart" rel="nofollow">
+							<strong class="opencart"> </strong>
+								<span class="cart_title">سبد خرید</span>
+									<span class="no_product">(خالی)</span>
+							</a>
+						</div>
+			      </div>
+	    <div class="languages">
+	    	<div id="language" class="wrapper-dropdown" tabindex="1">EN
+						<strong class="opencart"> </strong>
+						<ul class="dropdown languges">
+							 <li>
+							 	<a href="#" title="Français">
+									<span><img src="images/gb.png" alt="en" width="26" height="26"></span><span class="lang">English</span>
+								</a>
+							 </li>
+								<li>
+									<a href="#" title="Français">
+										<span><img src="images/au.png" alt="fr" width="26" height="26"></span><span class="lang">Français</span>
+									</a>
+								</li>
+						<li>
+							<a href="#" title="Español">
+								<span><img src="images/bm.png" alt="es" width="26" height="26"></span><span class="lang">Español</span>
+							</a>
+						</li>
+								<li>
+									<a href="#" title="Deutsch">
+										<span><img src="images/ck.png" alt="de" width="26" height="26"></span><span class="lang">Deutsch</span>
+									</a>
+								</li>
+						<li>
+							<a href="$" title="Russian">
+								<span><img src="images/cu.png" alt="ru" width="26" height="26"></span><span class="lang">Russian</span>
+							</a>
+						</li>
+				   </ul>
+		     </div>
+		     <script type="text/javascript">
+			function DropDown(el) {
+				this.dd = el;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						event.stopPropagation();
+					});
+				}
+			}
+
+			$(function() {
+
+				var dd = new DropDown( $('#language') );
+
+				$(document).click(function() {
+					// all dropdowns
+					$('.wrapper-dropdown').removeClass('active');
+				});
+
+			});
+
+		</script>
+		 </div>
+			<div class="currency">
+					<div id="currency" class="wrapper-dropdown" tabindex="1">$
+						<strong class="opencart"> </strong>
+						<ul class="dropdown">
+								<li><a href="#"><span>$</span>دلار</a></li>
+							<li><a href="#"><span>€</span>یورو</a></li>
+						</ul>
+					</div>
+					 <script type="text/javascript">
+			function DropDown(el) {
+				this.dd = el;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						event.stopPropagation();
+					});
+				}
+			}
+
+			$(function() {
+
+				var dd = new DropDown( $('#currency') );
+
+				$(document).click(function() {
+					// all dropdowns
+					$('.wrapper-dropdown').removeClass('active');
+				});
+
+			});
+
+		</script>
+   </div>
+		  <div class="login">
+		   	   <span><a href="login.html"><img src="images/login.png" alt="" title="login"/></a></span>
+		   </div>
+		 <div class="clear"></div>
+	 </div>
+	 <div class="clear"></div>
+ </div>
+	<div class="menu">
+	  <ul id="dc_mega-menu-orange" class="dc_mm-orange">
+		 <li><a href="index.html">صفحه اصلی</a></li>
+    <li><a href="products.html">محصولات</a>
+    <ul>
+      <li><a href="products.html">
+گوشی های تلفن همراه
+</a>
+        <ul>
+          <li><a href="preview-2.html">
+محصول 1
+</a></li>
+          <li><a href="preview-3.html">
+محصول 2</a></li>
+          <li><a href="#">
+محصول 3</a></li>
+          <li><a href="#">
+محصول 4</a></li>
+          <li><a href="preview-6.html">
+محصول 5</a></li>
+          <li><a href="#">
+محصول 6</a></li>
+        </ul>
+      </li>
+      <li><a href="products.html">دسکتاپ</a>
+        <ul>
+          <li><a href="preview.html">
+محصول 1
+</a></li>
+          <li><a href="preview-5.html">
+محصول 2</a></li>
+          <li><a href="preview-3.html">
+محصول 3</a></li>
+          <li><a href="#">
+محصول 4</a></li>
+          <li><a href="#">
+محصول 5</a></li>
+          <li><a href="#">
+محصول 6</a></li>
+        </ul>
+      </li>
+      <li><a href="products.html">لپ تاپ</a>
+        <ul>
+          <li><a href="preview-2.html">
+محصول 10
+</a></li>
+          <li><a href="preview-5.html">
+محصول 11</a></li>
+          <li><a href="#">
+محصول 12</a></li>
+          <li><a href="#">
+محصول 13</a></li>
+        </ul>
+      </li>
+      <li><a href="#">لوازم جانبی</a>
+        <ul>
+          <li><a href="#">
+محصول 14
+</a></li>
+          <li><a href="#">
+محصول 15</a></li>
+        </ul>
+      </li>
+      <li><a href="#">نرم افزار</a>
+        <ul>
+          <li><a href="#">محصول 16</a></li>
+          <li><a href="#">محصول 17</a></li>
+          <li><a href="#">محصول 18</a></li>
+          <li><a href="#">محصول 19</a></li>
+        </ul>
+      </li>
+       <li><a href="#">
+ورزش & تناسب اندام
+</a>
+        <ul>
+          <li><a href="#">محصول 16</a></li>
+          <li><a href="#">محصول 17</a></li>
+          <li><a href="#">محصول 18</a></li>
+          <li><a href="#">محصول 19</a></li>
+        </ul>
+      </li>
+       <li><a href="#">کفش</a>
+        <ul>
+          <li><a href="#">محصول 16</a></li>
+          <li><a href="#">محصول 17</a></li>
+          <li><a href="#">محصول 18</a></li>
+          <li><a href="#">محصول 19</a></li>
+        </ul>
+      </li>
+       <li><a href="#">جواهرات و اشیای قیمتی</a>
+        <ul>
+          <li><a href="#">محصول 16</a></li>
+          <li><a href="#">محصول 17</a></li>
+          <li><a href="#">محصول 18</a></li>
+          <li><a href="#">محصول 19</a></li>
+        </ul>
+      </li>
+       <li><a href="#">لباس</a>
+        <ul>
+          <li><a href="#">محصول 16</a></li>
+          <li><a href="#">محصول 17</a></li>
+          <li><a href="#">محصول 18</a></li>
+          <li><a href="#">محصول 19</a></li>
+        </ul>
+      </li>
+       <li><a href="#">
+دکور خانه & آشپزخانه
+</a>
+        <ul>
+          <li><a href="#">محصول 16</a></li>
+          <li><a href="#">محصول 17</a></li>
+          <li><a href="#">محصول 18</a></li>
+          <li><a href="#">محصول 19</a></li>
+        </ul>
+      </li>
+       <li><a href="#">
+زیبایی & بهداشت و درمان
+</a>
+        <ul>
+          <li><a href="#">محصول 16</a></li>
+          <li><a href="#">محصول 17</a></li>
+          <li><a href="#">محصول 18</a></li>
+          <li><a href="#">محصول 19</a></li>
+        </ul>
+      </li>
+       <li><a href="#">
+اسباب بازی های کودکان و نوجوانان & نوزادان
+</a>
+        <ul>
+          <li><a href="#">محصول 16</a></li>
+          <li><a href="#">محصول 17</a></li>
+          <li><a href="#">محصول 18</a></li>
+          <li><a href="#">محصول 19</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="products.html">برندها</a>
+    <ul>
+      <li><a href="products.html">
+نام تجاری 1
+</a></li>
+      <li><a href="products.html">
+نام تجاری 2
+</a></li>
+      <li><a href="products.html">
+نام تجاری 3
+</a></li>
+      <li><a href="#">
+نام تجاری 4
+</a></li>
+      <li><a href="#">
+نام تجاری 5
+</a></li>
+      <li><a href="#">
+نام تجاری 6
+</a></li>
+      <li><a href="#">
+نام تجاری 7
+</a></li>
+      <li><a href="#">
+نام تجاری 8
+</a></li>
+      <li><a href="#">>نام تجاری 9</a></li>
+      <li><a href="#">نام تجاری 10</a></li>
+    </ul>
+  </li>
+  <li><a href="faq.html">خدمات</a>
+    <ul>
+      <li><a href="#">خدمات 1</a>
+        <ul>
+          <li><a href="#">
+جزئیات خدمات A
+</a></li>
+          <li><a href="#">
+جزئیات خدمات B</a></li>
+        </ul>
+      </li>
+      <li><a href="#">خدمات 2</a>
+        <ul>
+          <li><a href="#">
+جزئیات خدمات c
+</a></li>
+        </ul>
+      </li>
+      <li><a href="#">خدمات 3</a>
+        <ul>
+          <li><a href="#">جزئیات خدمات D</a></li>
+          <li><a href="#">جزئیات خدمات E</a></li>
+          <li><a href="#">جزئیات خدمات F</a></li>
+        </ul>
+      </li>
+      <li><a href="#">خدمات 4</a></li>
+    </ul>
+  </li>
+  <li><a href="about.html">درباره ما</a></li>
+   <li><a href="#">تحویل</a></li>
+  <li><a href="faq.html">
+سوالات متداول
+</a></li>
+  <li><a href="contact.html">تماس با ما</a> </li>
+  <div class="clear"></div>
+</ul>
+</div>
+</div>
+ <div class="main">
+    <div class="content">
+    	<div class="content_top">
+    		<div class="heading">
+    		<h3>Feature Products</h3>
+    		</div>
+    		<div class="sort">
+    		<p>
+مرتب سازی بر اساس:
+
+    			<select>
+    				<option>
+پایین ترین قیمت
+</option>
+    				<option>
+بالاترین قیمت
+</option>
+    				<option>
+پایین ترین قیمت
+</option>
+    				<option>
+پایین ترین قیمت
+</option>
+    				<option>
+پایین ترین قیمت
+</option>
+    				<option>
+در انبار
+</option>
+    			</select>
+    		</p>
+    		</div>
+    		<div class="show">
+    		<p>
+نشان می دهد:
+
+    			<select>
+    				<option>4</option>
+    				<option>8</option>
+    				<option>12</option>
+    				<option>16</option>
+    				<option>20</option>
+    				<option>در انبار</option>
+    			</select>
+    		</p>
+    		</div>
+    		<div class="page-no">
+    			<p>
+تعداد صفحات:
+<ul>
+    				<li><a href="#">1</a></li>
+    				<li class="active"><a href="#">2</a></li>
+    				<li><a href="#">3</a></li>
+    				<li>[<a href="#">بعدی>>></a >]</li>
+    				</ul></p>
+    		</div>
+    		<div class="clear"></div>
+    	</div>
+	      <div class="section group">
+				<div class="grid_1_of_4 images_1_of_4">
+					 <a href="preview-3.html"><img src="images/feature-pic1.png" alt="" /></a>
+					 <h2>
+
+لورم ایپسوم یا طرح‌نما</h2>
+					 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+					 <p><span class="strike">$528.22</span><span class="price">$505.22</span></p>
+					  <div class="button"><span><img src="images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">افزودن به سبد خرید</a></span> </div>
+				     <div class="button"><span><a href="preview-3.html" class="details">جزئیات</a></span></div>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+					<a href="preview-2.html"><img src="images/feature-pic2.jpg" alt="" /></a>
+					 <h2>
+
+لورم ایپسوم یا طرح‌نما</h2>
+					 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+					 <p><span class="strike">$640.89</span><span class="price">$620.87</span></p>
+				     <div class="button"><span><img src="images/cart.jpg" alt="" /><a href="#" class="cart-button">افزودن به سبد خرید</a></span> </div>
+				     <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+					<a href="preview-4.html"><img src="images/feature-pic3.jpg" alt="" /></a>
+					 <h2>
+
+لورم ایپسوم یا طرح‌نما</h2>
+					 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+					 <p><span class="strike">$240.66</span><span class="price">$220.97</span></p>
+				      <div class="button"><span><img src="images/cart.jpg" alt="" /><a href="preview-6.html" class="cart-button">افزودن به سبد خرید</a></span> </div>
+				     <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+					<img src="images/feature-pic4.png" alt="" />
+					 <h2>
+
+لورم ایپسوم یا طرح‌نما</h2>
+					 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+					 <p><span class="strike">$436.22</span><span class="price">$415.54</span></p>
+				      <div class="button"><span><img src="images/cart.jpg" alt="" /><a href="#" class="cart-button">افزودن به سبد خرید</a></span> </div>
+				     <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+				</div>
+			</div>
+			<div class="content_bottom">
+    		<div class="heading">
+    		<h3>
+محصولات جدید
+</h3>
+    		</div>
+    		<div class="sort">
+    	<p>
+مرتب سازی بر اساس:
+
+    			<select>
+    				<option>
+پایین ترین قیمت
+</option>
+    				<option>
+بالاترین قیمت
+</option>
+    				<option>
+پایین ترین قیمت
+</option>
+    				<option>
+پایین ترین قیمت
+</option>
+    				<option>
+پایین ترین قیمت
+</option>
+    				<option>
+در انبار
+</option>
+    			</select>
+    		</p>
+    		</div>
+    		<div class="show">
+    	<p>
+نشان می دهد:
+
+    			<select>
+    				<option>4</option>
+    				<option>8</option>
+    				<option>12</option>
+    				<option>16</option>
+    				<option>20</option>
+    				<option>در انبار</option>
+    			</select>
+    		</p>
+    		</div>
+    		<div class="page-no">
+    			<p>
+تعداد صفحات:
+<ul>
+    				<li><a href="#">1</a></li>
+    				<li class="active"><a href="#">2</a></li>
+    				<li><a href="#">3</a></li>
+    				<li>[<a href="#">بعدی>>></a >]</li>
+    				</ul></p>
+    		</div>
+    		<div class="clear"></div>
+    	</div>
+			<div class="section group">
+				<div class="grid_1_of_4 images_1_of_4">
+					 <a href="preview-3.html"><img src="images/new-pic1.jpg" alt="" /></a>
+					 <div class="discount">
+					 <span class="percentage">40%</span>
+					</div>
+					 <h2>
+
+لورم ایپسوم یا طرح‌نما</h2>
+					 <p><span class="strike">$438.99</span><span class="price">$403.66</span></p>
+				     <div class="button"><span><img src="images/cart.jpg" alt="" /><a href="preview-3.html" class="cart-button">افزودن به سبد خرید</a></span> </div>
+				     <div class="button"><span><a href="preview-3.html" class="details">جزئیات</a></span></div>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+					<a href="preview-4.html"><img src="images/new-pic2.jpg" alt="" /></a>
+					 <div class="discount">
+					 <span class="percentage">22%</span>
+					</div>
+					 <h2>
+
+لورم ایپسوم یا طرح‌نما</h2>
+					 <p><span class="strike">$667.22</span><span class="price">$621.75</span></p>
+				      <div class="button"><span><img src="images/cart.jpg" alt="" /><a href="preview-4.html" class="cart-button">افزودن به سبد خرید</a></span></div>
+				     <div class="button"><span><a href="preview-4.html" class="details">جزئیات</a></span></div>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+					<a href="preview-2.html"><img src="images/feature-pic2.jpg" alt="" /></a>
+					<div class="discount">
+					 <span class="percentage">55%</span>
+					</div>
+					 <h2>
+
+لورم ایپسوم یا طرح‌نما</h2>
+					 <p><span class="strike">$457.22</span><span class="price">$428.02</span></p>
+				      <div class="button"><span><img src="images/cart.jpg" alt="" /><a href="preview-2.html" class="cart-button">افزودن به سبد خرید</a></span> </div>
+				     <div class="button"><span><a href="preview-2.html" class="details">جزئیات</a></span></div>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+				 <img src="images/new-pic3.jpg" alt="" />
+				  <div class="discount">
+					 <span class="percentage">66%</span>
+					</div>
+					 <h2>
+
+لورم ایپسوم یا طرح‌نما</h2>
+					 <p><span class="strike">$643.22</span><span class="price">$457.88</span></p>
+				      <div class="button"><span><img src="images/cart.jpg" alt="" /><a href="#" class="cart-button">افزودن به سبد خرید</a></span> </div>
+				     <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+				</div>
+			</div>
+    </div>
+ </div>
+</div>
+   <div class="footer">
+   	  <div class="wrapper">
+	     <div class="section group">
+				<div class="col_1_of_4 span_1_of_4">
+						<h4>اطلاعات</h4>
+						<ul>
+						<li><a href="#">درباره ما</a></li>
+						<li><a href="#">
+خدمات به مشتریان
+</a></li>
+						<li><a href="#"><span>
+جستجوی پیشرفته
+</span></a></li>
+						<li><a href="#">
+سفارشات و بازده
+</a></li>
+						<li><a href="#"><span>تماس با ما</span></a></li>
+						</ul>
+					</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h4>
+چرا خرید از ما
+</h4>
+						<ul>
+						<li><a href="about.html">درباره ما</a></li>
+						<li><a href="faq.html">
+خدمات به مشتریان
+</a></li>
+						<li><a href="#">
+سیاست حفظ حریم خصوصی
+</a></li>
+						<li><a href="contact.html"><span>
+نقشه سایت
+</span></a></li>
+						<li><a href="preview-2.html"><span>
+شرایط جستجو
+</span></a></li>
+						</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+						<h4>
+حساب من
+</h4>
+						<ul>
+							<li><a href="contact.html">ورود به برنامه</a></li>
+							<li><a href="index.html">
+مشاهده سبد خرید
+</a></li>
+							<li><a href="#">
+علاقمندی ها
+</a></li>
+							<li><a href="#">
+پیگیری سفارش من
+</a></li>
+							<li><a href="faq.html">کمک</a></li>
+						</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+						<h4>تماس با ما</h4>
+						<ul>
+							<li><span>+91-123-456789</span></li>
+							<li><span>+00-123-000000</span></li>
+						</ul>
+						<div class="social-icons">
+							<h4>دنبال کنید با ما</h4>
+					   		  <ul>
+							      <li class="facebook"><a href="#" target="_blank"> </a></li>
+							      <li class="twitter"><a href="#" target="_blank"> </a></li>
+							      <li class="googleplus"><a href="#" target="_blank"> </a></li>
+							      <li class="contact"><a href="#" target="_blank"> </a></li>
+							      <div class="clear"></div>
+						     </ul>
+   	 					</div>
+				</div>
+			</div>
+			<div class="copy_left">
+					<p>
+
+کپی رایت@2015 تمام حقوق مادی و معنوی این سایت متعلق به گروه برنامه نویسان میباشد
+<a href="http://www.barnamenevisan.org/">برنامه نویسان</a> </p>
+		   </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+	  			containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+	 		};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+</body>
+</html>
+
+
+
+{% endblock %}

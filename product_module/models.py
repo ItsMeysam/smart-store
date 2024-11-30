@@ -1,9 +1,7 @@
 from django.db import models
-from django.urls import reverse
 
 
-# Create your models here.
-
+#creat main class for product
 class Product(models.Model):
     title = models.CharField(max_length=300, db_index=True, verbose_name='نام محصول')
     # category = models.ManyToManyField(ProductCategory, related_name=''product_categories,
