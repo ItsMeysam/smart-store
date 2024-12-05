@@ -2,11 +2,13 @@ from http.client import HTTPResponse
 
 from django.http import HttpRequest
 from django.shortcuts import render
+from django.views.generic import TemplateView
+
 
 # Create your views here.
 
-def view_home_page(request):
-    return render(request, 'home_module/view_home_page.html')
+class HomeView(TemplateView):
+    template_name = 'home_module/home_page_view.html'
 
 def site_header_component(request):
     return render(request, 'shared/site_header_component.html')
