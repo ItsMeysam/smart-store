@@ -1,4 +1,5 @@
 {% extends 'shared/_layout.html' %}
+{% load thumbnail %}
 
 
 {% block title %}صفحه اصلی{% endblock %}
@@ -70,7 +71,6 @@
             </div>
             <div class="clear"></div>
         </div>
-
         <div class="main">
             <div class="content">
                 <div class="content_top">
@@ -131,55 +131,25 @@
                     <div class="clear"></div>
                 </div>
                 <div class="section group">
-                    <div class="grid_1_of_4 images_1_of_4">
-                        <a href="preview-3.html"><img src="static/images/feature-pic1.png" alt=""/></a>
-                        <h2>
-
-                            لورم ایپسوم یا طرح‌نما </h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                        <p><span class="strike">$528.22</span><span class="price">$505.22</span></p>
-                        <div class="button" dir=ltr><span><img src="static/images/cart.jpg" alt=""/><a
-                                href="preview-3.html"
-                                class="cart-button">افزودن به سبد خرید</a></span>
+                    {% for product in products %}
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="preview-3.html">
+                                {% thumbnail product.image "212x212" crop="center" as im %}
+                                    <img src="{{ im.url }}" alt=""/>
+                                {% endthumbnail %}
+                            </a>
+                            <h2>{{ product.titel }}</h2>
+                            <p>{{ product.short_description }}</p>
+                            <p><span class="strike">{{ product.price }}</span><span class="price">{{ product.price }}</span></p>
+                            <div class="button" dir=ltr><span>
+                                <img src="static/images/cart.jpg" alt=""/>
+                                <a href="preview-3.html" class="cart-button">افزودن به سبد خرید</a></span>
+                            </div>
+                            <div class="button"><span><a href="{{ product.get_absolute_url }}" class="details">جزئیات</a></span></div>
                         </div>
-                        <div class="button"><span><a href="preview-3.html" class="details">جزئیات</a></span></div>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4">
-                        <a href="preview-2.html"><img src="static/images/feature-pic2.jpg" alt=""/></a>
-                        <h2>
 
-                            لورم ایپسوم یا طرح‌نما </h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                        <p><span class="strike">$640.89</span><span class="price">$620.87</span></p>
-                        <div class="button"><span><img src="static/images/cart.jpg" alt=""/><a href="#"
-                                                                                               class="cart-button">افزودن به سبد خرید</a></span>
-                        </div>
-                        <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4">
-                        <a href="preview-4.html"><img src="static/images/feature-pic3.jpg" alt=""/></a>
-                        <h2>
+                    {% endfor %}
 
-                            لورم ایپسوم یا طرح‌نما </h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                        <p><span class="strike">$240.66</span><span class="price">$220.97</span></p>
-                        <div class="button"><span><img src="static/images/cart.jpg" alt=""/><a href="preview-6.html"
-                                                                                               class="cart-button">افزودن به سبد خرید</a></span>
-                        </div>
-                        <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
-                    </div>
-                    <div class="grid_1_of_4 images_1_of_4">
-                        <img src="static/images/feature-pic4.png" alt=""/>
-                        <h2>
-
-                            لورم ایپسوم یا طرح‌نما </h2>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                        <p><span class="strike">$436.22</span><span class="price">$415.54</span></p>
-                        <div class="button"><span><img src="static/images/cart.jpg" alt=""/><a href="#"
-                                                                                               class="cart-button">افزودن به سبد خرید</a></span>
-                        </div>
-                        <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
-                    </div>
                 </div>
                 <div class="content_bottom">
                     <div class="heading">

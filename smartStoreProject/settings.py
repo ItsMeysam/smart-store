@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'home_module',
     'product_module',
     # external install:
-    'django_render_partial'
+    'django_render_partial',
+    'sorl.thumbnail',
+
 ]
 
 MIDDLEWARE = [
@@ -120,7 +122,6 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
-
 MEDIA_URL = '/medias/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
 
@@ -128,5 +129,3 @@ MEDIA_ROOT = BASE_DIR / 'uploads'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
