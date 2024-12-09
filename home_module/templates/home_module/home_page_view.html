@@ -118,18 +118,22 @@
                         </p>
                     </div>
                     <div class="page-no">
-                        <p>
-                            تعداد صفحات:
-                        <ul>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li>[<a href="#">بعدی>>></a>]</li>
-                        </ul>
-                        </p>
+                        <p>تعداد صفحات :</p>
+                        {% if page_obj.has_previous %}
+                            <li><a href="?page={{ page_obj.previous_page_number }}">قبلی</a></li>
+                        {% endif %}
+                        {% for pageNumber in paginator.page_range %}
+                            <li><a href="?page={{ pageNumber }}">{{ pageNumber }}</a></li>
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <li><a href="?page={{ page_obj.next_page_number }}">بعدی</a></li>
+                        {% endif %}
+
                     </div>
+
                     <div class="clear"></div>
                 </div>
+
                 <div class="section group">
                     {% for product in products %}
                         <div class="grid_1_of_4 images_1_of_4">
@@ -140,12 +144,15 @@
                             </a>
                             <h2>{{ product.titel }}</h2>
                             <p>{{ product.short_description }}</p>
-                            <p><span class="strike">{{ product.price }}</span><span class="price">{{ product.price }}</span></p>
+                            <p><span class="strike">{{ product.price }}</span><span
+                                    class="price">{{ product.price }}</span>
+                            </p>
                             <div class="button" dir=ltr><span>
                                 <img src="static/images/cart.jpg" alt=""/>
                                 <a href="preview-3.html" class="cart-button">افزودن به سبد خرید</a></span>
                             </div>
-                            <div class="button"><span><a href="{{ product.get_absolute_url }}" class="details">جزئیات</a></span></div>
+                            <div class="button"><span><a href="{{ product.get_absolute_url }}"
+                                                         class="details">جزئیات</a></span></div>
                         </div>
 
                     {% endfor %}

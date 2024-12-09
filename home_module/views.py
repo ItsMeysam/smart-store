@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
-
+from django.views.generic import TemplateView, ListView, View
 from product_module.models import Product
 
 
@@ -21,3 +20,11 @@ def site_header_component(request):
 
 def site_footer_component(request):
     return render(request, 'shared/site_footer_component.html')
+
+
+def about_us(request):
+    return render(request, 'home_module/about_us.html')
+
+def popular_question(request):
+    return render(request, 'home_module/popular_question.html')
+

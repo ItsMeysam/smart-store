@@ -7,11 +7,13 @@ class ProductListView(ListView):
     template_name = 'product_module/product_list_view.html'
     model = Product
     context_object_name = 'products'
+    ordering = ['price']
+    paginate_by = 4
 
 
 class ProductDetailView(DetailView):
     template_name = 'product_module/product_detail_view.html'
     model = Product
-    context_object_name = 'products'
+
 
 
