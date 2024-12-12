@@ -57,7 +57,8 @@
                             <li><a href="?page={{ page_obj.previous_page_number }}">قبلی</a></li>
                         {% endif %}
                         {% for pageNumber in paginator.page_range %}
-                            <li><a href="?page={{ pageNumber }}">{{ pageNumber }}</a></li>
+                            <li class="{% if page_obj.number == pageNumber %} active {% endif %}">
+                                <a href="?page={{ pageNumber }}">{{ pageNumber }}</a></li>
                         {% endfor %}
                         {% if page_obj.has_next %}
                             <li><a href="?page={{ page_obj.next_page_number }}">بعدی</a></li>

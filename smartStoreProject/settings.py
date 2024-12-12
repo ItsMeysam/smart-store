@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home_module',
     'product_module',
+    'account_module',
+    'contact_module',
     # external install:
     'django_render_partial',
     'sorl.thumbnail',

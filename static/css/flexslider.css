@@ -64,7 +64,7 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs .active {opacity: 1; cursor: default;}
 /*----flexslider1---*/
 .flexslider1{
-	
+	position: absolute;
 }
 .flexslider1 ol.flex-control-nav{
 	position: absolute;
