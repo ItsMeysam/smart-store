@@ -1,0 +1,261 @@
+{% extends 'shared/_layout.html' %}
+{% load thumbnail %}
+
+{% block title %}
+    جزئیات محصول
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="main">
+        <div class="content">
+            <div class="content_top">
+                <div class="back-links">
+                    <p><a href="#">صفحه اصلی</a> >> <a href="#">الکترونیک</a></p>
+                </div>
+                <div class="sort">
+                    <p>
+                        مرتب سازی بر اساس:
+
+                        <select>
+                            <option>
+                                پایین ترین قیمت
+                            </option>
+                            <option>
+                                بالاترین قیمت
+                            </option>
+                            <option>
+                                پایین ترین قیمت
+                            </option>
+                            <option>
+                                پایین ترین قیمت
+                            </option>
+                            <option>
+                                پایین ترین قیمت
+                            </option>
+                            <option>
+                                در انبار
+                            </option>
+                        </select>
+                    </p>
+                </div>
+                <div class="show">
+                    <p>
+                        نشان می دهد:
+
+                        <select>
+                            <option>4</option>
+                            <option>8</option>
+                            <option>12</option>
+                            <option>16</option>
+                            <option>20</option>
+                            <option>در انبار</option>
+                        </select>
+                    </p>
+                </div>
+                <div class="page-no">
+                    <p>
+                        تعداد صفحات:
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li>[<a href="#"> بعدی>>></a>]</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="section group">
+                <div class="cont-desc span_1_of_2">
+                    <div class="grid images_3_of_2">
+                        {% thumbnail product.image "339x339" crop="center" as im %}
+                            <img src="{{ im.url }}" alt=""/>
+                        {% endthumbnail %}
+                    </div>
+                    <div class="desc span_3_of_2">
+                        <h2>{{ products.title }}</h2>
+                        <p>{{ products.description }}</p>
+                        <div class="price">
+                            <p>قيمت:<span>{{ products.price }}</span></p>
+                        </div>
+                        <div class="available">
+                            <p>
+                                گزینه های در دسترس:
+                            </p>
+                            <ul>
+                                <li>
+                                    رنگ:
+
+                                    <select>
+                                        <option>نقره ای</option>
+                                        <option>
+                                            سیاه و سفید
+                                        </option>
+                                        <option>
+                                            تاریک سیاه
+                                        </option>
+                                        <option>قرمز</option>
+                                    </select></li>
+                                <li>
+                                    حجم:
+                                    <select>
+                                        <option>بزرگ</option>
+                                        <option>متوسط</option>
+                                        <option>کوچک</option>
+                                        <option>بزرگ</option>
+                                        <option>
+                                            کوچک
+                                        </option>
+                                    </select></li>
+                                <li>
+                                    کیفیت:
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select></li>
+                            </ul>
+                        </div>
+                        <div class="share">
+
+                            <ul>
+                                <li><a href="#"><img src="images/youtube.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/linkedin.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="add-cart">
+                            <div class="rating">
+                                <p>
+                                    امتیاز:
+                                    <img src="{{ product.image }}"><span>[3 از 5 ستاره]</span></p>
+                            </div>
+                            <div class="button"><span><a href="#">افزودن به سبد خرید</a></span></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="product-desc">
+                        <h2>
+                            جزئیات محصول
+                        </h2>
+                        <p>{{ product.description }}</p>
+                    </div>
+                    <div class="product-tags">
+                        <h2>
+                            برچسب ها محصول
+                        </h2>
+                        <h4>
+                            برچسب ها خود را اضافه کنید:
+                        </h4>
+                        <div class="input-box">
+                            <input type="text" value=""/>
+                        </div>
+                        <div class="button"><span><a href="#">
+اضافه کردن برچسب ها
+</a></span></div>
+                    </div>
+                </div>
+                <div class="leftsidebar span_3_of_1" dir=ltr>
+                    <h2>ردههای صفحه</h2>
+                    <ul>
+                        <li><a href="#">
+                            گوشی های تلفن همراه
+                        </a></li>
+                        <li><a href="#">دسکتاپ</a></li>
+                        <li><a href="#">لپ تاپ</a></li>
+                        <li><a href="#">لوازم جانبی</a></li>
+                        <li><a href="#">نرم افزار</a></li>
+                        <li><a href="#">
+                            ورزش & تناسب اندام
+                        </a></li>
+                        <li><a href="#">کفش</a></li>
+                        <li><a href="#">جواهرات و اشیای قیمتی</a></li>
+                        <li><a href="#">لباس</a></li>
+                        <li><a href="#">
+                            دکور خانه & آشپزخانه
+                        </a></li>
+                        <li><a href="#">
+                            زیبایی & بهداشت و درمان
+                        </a></li>
+                        <li><a href="#">
+                            اسباب بازی های کودکان و نوجوانان & نوزادان
+                        </a></li>
+                    </ul>
+                    <div class="subscribe">
+                        <h2>
+                            ثبت نام در خبرنامه
+                        </h2>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        <div class="signup">
+                            <form>
+                                <input type="text" value="E-mail address" onfocus="this.value = '';"
+                                       onblur="if (this.value == '') {this.value = 'E-mail address';"><input
+                                    type="submit" value="Sign up">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="community-poll">
+                        <h2>
+                            نظرسنجی جامعه
+                        </h2>
+                        <p>
+                            دلیل اصلی برای شما به خرید آنلاین محصولات چیست؟
+                        </p>
+                        <div class="poll">
+                            <form>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="vote" class="radio" value="1">
+                                        <span class="label"><label>
+راحت تر حمل و نقل و تحویل
+</label></span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vote" class="radio" value="2">
+                                        <span class="label"><label for="vote_2">
+قیمت پایین تر
+</label></span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vote" class="radio" value="3">
+                                        <span class="label"><label for="vote_3">
+انتخاب بزرگتر
+</label></span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vote" class="radio" value="5">
+                                        <span class="label"><label for="vote_5">
+امنیت پرداخت
+ </label></span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vote" class="radio" value="6">
+                                        <span class="label"><label for="vote_6">
+30 روز ضمانت برگشت پول
+</label></span>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="vote" class="radio" value="7">
+                                        <span class="label"><label for="vote_7">
+دیگر.
+</label></span>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
