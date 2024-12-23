@@ -1,5 +1,3 @@
-from wsgiref.validate import validator
-
 from django import forms
 from django.core import validators
 from django.core.exceptions import ValidationError
@@ -11,7 +9,6 @@ class RegisterForm(forms.Form):
         widget=forms.TextInput(),
         validators=[
             validators.MaxLengthValidator(100),
-            validators.DomainNameValidator,
         ]
     )
     email = forms.EmailField(
@@ -49,7 +46,6 @@ class LoginForm(forms.Form):
         widget=forms.TextInput(),
         validators=[
             validators.MaxLengthValidator(100),
-            validators.DomainNameValidator,
         ]
     )
     password = forms.CharField(
@@ -57,3 +53,12 @@ class LoginForm(forms.Form):
         widget=forms.PasswordInput()
 
     )
+    email = forms.EmailField(
+        label='ایمیل',
+        widget=forms.EmailInput(),
+        validators=[
+            validators.EmailValidator,
+        ]
+
+    )
+

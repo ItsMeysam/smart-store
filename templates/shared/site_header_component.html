@@ -87,46 +87,9 @@
 
                 </script>
             </div>
-            <div class="currency" title="currency">
-                <div id="currency" class="wrapper-dropdown" tabindex="1">$
-                    <strong class="opencart"> </strong>
-                    <ul class="dropdown">
-                        <li><a href="#"><span>$</span>دلار</a></li>
-                        <li><a href="#"><span>€</span>یورو</a></li>
-                    </ul>
-                </div>
-                <script type="text/javascript">
-                    function DropDown(el) {
-                        this.dd = el;
-                        this.initEvents();
-                    }
-
-                    DropDown.prototype = {
-                        initEvents: function () {
-                            var obj = this;
-
-                            obj.dd.on('click', function (event) {
-                                $(this).toggleClass('active');
-                                event.stopPropagation();
-                            });
-                        }
-                    }
-
-                    $(function () {
-
-                        var dd = new DropDown($('#currency'));
-
-                        $(document).click(function () {
-                            // all dropdowns
-                            $('.wrapper-dropdown').removeClass('active');
-                        });
-
-                    });
-
-                </script>
-            </div>
             <div class="login">
-                <span><a href="login.html"><img src="static/images/login.png" alt="" title="login"/></a></span>
+                <span><a href="{% url 'login_page' %}"><img src="static/images/login.png" alt=""
+                                                            title="login"/></a></span>
             </div>
             <div class="clear"></div>
         </div>
@@ -299,39 +262,11 @@
                     <li><a href="#">نام تجاری 10</a></li>
                 </ul>
             </li>
-            <li><a href="faq.html">خدمات</a>
-                <ul>
-                    <li><a href="#">خدمات 1</a>
-                        <ul>
-                            <li><a href="#">
-                                جزئیات خدمات A
-                            </a></li>
-                            <li><a href="#">
-                                جزئیات خدمات B</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">خدمات 2</a>
-                        <ul>
-                            <li><a href="#">
-                                جزئیات خدمات c
-                            </a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">خدمات 3</a>
-                        <ul>
-                            <li><a href="#">جزئیات خدمات D</a></li>
-                            <li><a href="#">جزئیات خدمات E</a></li>
-                            <li><a href="#">جزئیات خدمات F</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">خدمات 4</a></li>
-                </ul>
-            </li>
             <li><a href="{% url 'about_us' %}">درباره ما</a></li>
             <li><a href="{% url 'popular_question' %}">
                 سوالات متداول
             </a></li>
-            <li><a href="contact.html">تماس با ما</a></li>
+            <li><a href="{% url 'contact' %}">تماس با ما</a></li>
             <div class="clear"></div>
         </ul>
     </div>

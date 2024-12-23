@@ -5,7 +5,8 @@ from account_module.forms import RegisterForm, LoginForm
 from account_module.models import User
 from django.urls import reverse
 from django.utils.crypto import get_random_string
-from django.contrib.auth import login, logout
+from django.contrib.auth import login
+from home_module import templates
 
 
 class RegisterVeiw(View):
@@ -72,16 +73,16 @@ class LoginView(View):
     def post(self, request: HttpRequest):
         login_form = LoginForm(request.POST)
         if login_form.is_valid():
-            user_name = login_form.cleaned_data['name']
             user_email = login_form.cleaned_data['email']
+            user_name = login_form.cleaned_data['name']
             user_password = login_form.cleaned_data['password']
-            user: User = User.objects.filter(name=user_name).first()
+            user: User = User.objects.filter(email__iexact=user_email).first()
             if user is not None:
                 if not user.is_active:
                     login_form.add_error('email', 'حساب کاربری شما فعال نشده است')
-                    pass
+
                 else:
-                    # این متدد از داخل AbstractUser  فراخوانی میشود
+                    #این متدد از داخل AbstractUser  فراخوانی میشود
                     is_password_correct = user.check_password(user_password)
                     if is_password_correct:
                         login(request, user)
@@ -92,7 +93,7 @@ class LoginView(View):
             else:
                 login_form.add_error('email', 'کاربری با مشخصات وارد شده وجود ندارد')
         context = {
-            'login_form': login_form
+            'login_form': login_form,
         }
 
         return render(request, 'account_module/login_page.html', context)
