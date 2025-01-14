@@ -5,7 +5,6 @@ from django.views.generic import TemplateView, ListView, View
 from product_module.models import Product
 
 
-
 class HomeView(TemplateView):
     template_name = 'home_module/home_page_view.html'
     paginate_by = 4
@@ -13,6 +12,8 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         products:Product = Product.objects.all()
+        Product.objects.order_by('-created_at')[:5]
+
 
 
         paginator = Paginator(products, 4)
@@ -43,4 +44,3 @@ def about_us(request):
 
 def popular_question(request):
     return render(request, 'home_module/popular_question.html')
-
