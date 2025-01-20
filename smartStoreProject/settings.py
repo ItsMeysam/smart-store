@@ -60,7 +60,7 @@ ROOT_URLCONF = 'smartStoreProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -123,11 +123,13 @@ AUTH_USER_MODEL = 'account_module.User'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    os.path.join(BASE_DIR, "static")
 ]
 
 MEDIA_URL = '/medias/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

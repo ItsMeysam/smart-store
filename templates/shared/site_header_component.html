@@ -1,7 +1,9 @@
+{% load static %}
+
 <div class="header">
     <div class="header_top">
         <div class="logo">
-            <a href="{% url 'home_page' %}"><img src="static/images/logo.png" alt=""/></a>
+            <a href="{% url 'home_page' %}"><img src="{% static 'images/logo.png' %}" alt=""/></a>
         </div>
         <div class="header_top_left">
             <div class="search_box">
@@ -27,31 +29,31 @@
                     <ul class="dropdown languges">
                         <li>
                             <a href="#" title="Français">
-                                <span><img src="static/images/gb.png" alt="en" width="26" height="26"></span><span
+                                <span><img src="{% static 'images/gb.png' %}" alt="en" width="26" height="26"></span><span
                                     class="lang">English</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" title="Français">
-                                <span><img src="static/images/au.png" alt="fr" width="26" height="26"></span><span
+                                <span><img src="{% static 'images/au.png' %}" alt="fr" width="26" height="26"></span><span
                                     class="lang">Français</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" title="Español">
-                                <span><img src="static/images/bm.png" alt="es" width="26" height="26"></span><span
+                                <span><img src="{% static 'images/bm.png' %}" alt="es" width="26" height="26"></span><span
                                     class="lang">Español</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" title="Deutsch">
-                                <span><img src="static/images/ck.png" alt="de" width="26" height="26"></span><span
+                                <span><img src="{% static 'images/ck.png' %}" alt="de" width="26" height="26"></span><span
                                     class="lang">Deutsch</span>
                             </a>
                         </li>
                         <li>
                             <a href="$" title="Russian">
-                                <span><img src="static/images/cu.png" alt="ru" width="26" height="26"></span><span
+                                <span><img src="{% static 'images/cu.png' %}" alt="ru" width="26" height="26"></span><span
                                     class="lang">Russian</span>
                             </a>
                         </li>
@@ -88,7 +90,7 @@
                 </script>
             </div>
             <div class="login">
-                <span><a href="{% url 'login_page' %}"><img src="static/images/login.png" alt=""
+                <span><a href="{% url 'login_page' %}"><img src="images/login.png" alt=""
                                                             title="login"/></a></span>
             </div>
             <div class="clear"></div>
@@ -266,7 +268,7 @@
             <li><a href="{% url 'popular_question' %}">
                 سوالات متداول
             </a></li>
-            <li><a href="{% url 'contact' %}">تماس با ما</a></li>
+            <li><a href='{% url "contact_page" %}'>تماس با ما</a></li>
             <div class="clear"></div>
         </ul>
     </div>
