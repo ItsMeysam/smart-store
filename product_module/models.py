@@ -50,7 +50,7 @@ class Product(models.Model):
     description = models.TextField(max_length=300, verbose_name='درباره محصول')
     slug = models.SlugField(default='', null=False, db_index=True, blank=False,
                             max_length=200, unique=True, verbose_name='عنوان در url')
-    image = models.ImageField(upload_to='images/products', null=True, blank=True, verbose_name='عکس محصول')
+    image = models.ImageField(upload_to='images/products/', null=True, blank=True, verbose_name='عکس محصول')
     is_active = models.BooleanField(default=False, verbose_name='فعال / غیرفعال')
     is_delete = models.BooleanField(default=False, verbose_name='حذف شده / نشده')
     created_at = models.DateTimeField(auto_now_add=True)
