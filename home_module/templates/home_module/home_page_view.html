@@ -8,27 +8,33 @@
 {% block content %}
     <div class="wrap" style="overflow-x: hidden">
         <div class="header_bottom">
-            <div class="section group">
-            {% for product in random_products %}
             <div class="header_bottom_right">
-                
+                <div class="section group">
+                    {% for product in random_products %}
                     <div class="listview_1_of_2 images_1_of_2">
-                        {% thumbnail product.image "212x212" crop="center" as im %}
-                        <div class="listimg listimg_2_of_1">
-                            <a href="{% url 'product.detail' %}"> <img src="{{ im.url }}" alt=""/></a>
-                        </div>
-                        {% endthumbnail %}
                         
+                        <div class="listimg listimg_2_of_1">
+                            {% thumbnail product.image "212x212" crop="center" as im %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ im.url }}" alt="{{ product.title }}">
+                                </a>
+                            {% endthumbnail %}
+                        </div>
+            
                         <div class="text list_2_of_1">
-                            <h2>{{ product.title|truncatechars:10 }}</h2>
-                            <p>{{ product.short_description|truncatechars:10 }}</p>
-                            <div class="button"><span><a href="preview.html">افزودن به سبد خرید</a></span></div>
+                            <h2>{{ product.title|truncatechars:20 }}</h2>
+                            <p>{{ product.short_description|truncatechars:40 }}</p>
+                            <div class="button">
+                                <span>
+                                    <a href="{% url 'product_detail' product.id %}">افزودن به سبد خرید</a>
+                                </span>
+                            </div>
                         </div>
                     </div>
+                    {% endfor %}
+                </div>
                 <div class="clear"></div>
-            
-            {% endfor %}
-            </div>
+            </div>            
             <div class="header_bottom_left_images">
                 <!-- FlexSlider -->
                 <section class="slider" dir=ltr>
