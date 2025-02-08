@@ -54,6 +54,7 @@ class Product(models.Model):
     is_active = models.BooleanField(default=False, verbose_name='فعال / غیرفعال')
     is_delete = models.BooleanField(default=False, verbose_name='حذف شده / نشده')
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def get_absolute_url(self):
         return reverse('product_detail', args=[(self.id)])
