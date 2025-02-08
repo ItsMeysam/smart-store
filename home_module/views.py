@@ -13,6 +13,7 @@ class HomeView(TemplateView):
         context = super().get_context_data(**kwargs)
         products:Product = Product.objects.all()
         Product.objects.order_by('-created_at')[:5]
+        random_products = Product.objects.order_by('?')[:4]
 
 
 
@@ -23,7 +24,7 @@ class HomeView(TemplateView):
             page_obj = paginator.get_page(page_number)
         except:
             raise Http404("صفحه مورد نظر موجود نیست.")
-
+        context['random_products'] = random_products
         context['page_obj'] = page_obj
         context['products'] = page_obj.object_list
         context['paginator'] = paginator

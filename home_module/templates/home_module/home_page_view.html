@@ -8,52 +8,26 @@
 {% block content %}
     <div class="wrap" style="overflow-x: hidden">
         <div class="header_bottom">
+            <div class="section group">
+            {% for product in random_products %}
             <div class="header_bottom_right">
-                <div class="section group">
+                
                     <div class="listview_1_of_2 images_1_of_2">
+                        {% thumbnail product.image "212x212" crop="center" as im %}
                         <div class="listimg listimg_2_of_1">
-                            <a href="preview.html"> <img src="static/images/pic4.png" alt=""/></a>
+                            <a href="{% url 'product.detail' %}"> <img src="{{ im.url }}" alt=""/></a>
                         </div>
+                        {% endthumbnail %}
+                        
                         <div class="text list_2_of_1">
-                            <h2>آی فون</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                            <h2>{{ product.title|truncatechars:10 }}</h2>
+                            <p>{{ product.short_description|truncatechars:10 }}</p>
                             <div class="button"><span><a href="preview.html">افزودن به سبد خرید</a></span></div>
                         </div>
                     </div>
-                    <div class="listview_1_of_2 images_1_of_2">
-                        <div class="listimg listimg_2_of_1">
-                            <a href="preview-5.html"><img src="static/images/pic3.png" alt=""/></a>
-                        </div>
-                        <div class="text list_2_of_1">
-                            <h2>سامسونگ</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <div class="button"><span><a href="preview-5.html">افزودن به سبد خرید</a></span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section group">
-                    <div class="listview_1_of_2 images_1_of_2">
-                        <div class="listimg listimg_2_of_1">
-                            <a href="preview-3.html"> <img src="static/images/pic3.jpg" alt=""/></a>
-                        </div>
-                        <div class="text list_2_of_1">
-                            <h2>Acer</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <div class="button"><span><a href="preview-3.html">افزودن به سبد خرید</a></span></div>
-                        </div>
-                    </div>
-                    <div class="listview_1_of_2 images_1_of_2">
-                        <div class="listimg listimg_2_of_1">
-                            <a href="preview-6.html"><img src="static/images/pic1.png" alt=""/></a>
-                        </div>
-                        <div class="text list_2_of_1">
-                            <h2>Canon</h2>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                            <div class="button"><span><a href="preview-6.html">افزودن به سبد خرید</a></span></div>
-                        </div>
-                    </div>
-                </div>
                 <div class="clear"></div>
+            
+            {% endfor %}
             </div>
             <div class="header_bottom_left_images">
                 <!-- FlexSlider -->
