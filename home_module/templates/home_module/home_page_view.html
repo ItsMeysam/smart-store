@@ -144,17 +144,21 @@
                             </select>
                         </p>
                     </div>
+                    
                     <div class="page-no">
-                        <p>
-                            تعداد صفحات:
-                        <ul>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li>[<a href="#"> بعدی>>></a>]</li>
-                        </ul>
-                        </p>
+                        <p>تعداد صفحات :</p>
+                        {% if page_obj_latest.has_previous %}
+                            <li><a href="?page={{ page_obj_latest.previous_page_number }}">قبلی</a></li>
+                        {% endif %}
+                        {% for pageNumber in paginator_latest.page_range %}
+                            <li><a href="?page={{ pageNumber }}">{{ pageNumber }}</a></li>
+                        {% endfor %}
+                        {% if page_obj_latest.has_next %}
+                            <li><a href="?page={{ page_obj_latest.next_page_number }}">بعدی</a></li>
+                        {% endif %}
+
                     </div>
+
                     <div class="clear"></div>
                 </div>
                 <div class="section group ">

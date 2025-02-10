@@ -5,13 +5,14 @@ from django.views.generic import TemplateView, ListView, View
 from product_module.models import Product
 
 
+#TODO: درست کردن بخش محصولات جدید
 class HomeView(TemplateView):
-    template_name = 'home_module/home_page_view.html'
+    template_name = 'home_module/home_page_view.html' 
     paginate_by = 4
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
+        
         # دریافت پارامتر 'sort' از URL (اگر وجود داشته باشد)
         sort_order = self.request.GET.get('sort', 'asc')  # به طور پیش‌فرض صعودی است
 
@@ -36,10 +37,20 @@ class HomeView(TemplateView):
             page_obj = paginator.get_page(page_number)
         except:
             raise Http404("صفحه مورد نظر موجود نیست.")
+        
+        # صفحه بندی ۲
+        paginator_latest = Paginator(latest_products, self.paginate_by)
+        page_number_latest = self.request.GET.get('page', 1)
+
+        try:
+            page_obj_latest = paginator_latest.get_page(page_number_latest)
+        except:
+            raise Http404("صفحه مورد نظر موجود نیست.")
 
         # اضافه کردن محصولات صفحه‌بندی شده و دیگر اطلاعات به context
         context['random_products'] = random_products
         context['page_obj'] = page_obj
+        context['page_obj_latest'] = page_obj_latest
         context['products'] = page_obj.object_list
         context['paginator'] = paginator
         context['latest_products'] = latest_products 
