@@ -57,32 +57,13 @@
                     <div class="heading">
                         <h3> ویژگی محصولات</h3>
                     </div>
-                    <div class="sort">
-                        <p>
-                            مرتب سازی بر اساس:
-
-                            <select>
-                                <option>
-                                    پایین ترین قیمت
-                                </option>
-                                <option>
-                                    بالاترین قیمت
-                                </option>
-                                <option>
-                                    پایین ترین قیمت
-                                </option>
-                                <option>
-                                    پایین ترین قیمت
-                                </option>
-                                <option>
-                                    پایین ترین قیمت
-                                </option>
-                                <option>
-                                    در انبار
-                                </option>
-                            </select>
-                        </p>
-                    </div>
+                    <form method="get" action="{% url 'home_page' %}" onchange="this.submit()">
+                        <label for="sort">مرتب سازی بر اساس قیمت:</label>
+                        <select name="sort" id="sort">
+                            <option value="asc" {% if request.GET.sort == "asc" %}selected{% endif %}>پایین‌ترین قیمت</option>
+                            <option value="desc" {% if request.GET.sort == "desc" %}selected{% endif %}>بالاترین قیمت</option>
+                        </select>
+                    </form>
                     <div class="show">
                         <p>
                             نشان می دهد:
@@ -93,7 +74,6 @@
                                 <option>12</option>
                                 <option>16</option>
                                 <option>20</option>
-                                <option>در انبار</option>
                             </select>
                         </p>
                     </div>
@@ -144,32 +124,13 @@
                             محصولات جدید
                         </h3>
                     </div>
-                    <div class="sort">
-                        <p>
-                            مرتب سازی بر اساس:
-
-                            <select>
-                                <option>
-                                    پایین ترین قیمت
-                                </option>
-                                <option>
-                                    بالاترین قیمت
-                                </option>
-                                <option>
-                                    پایین ترین قیمت
-                                </option>
-                                <option>
-                                    پایین ترین قیمت
-                                </option>
-                                <option>
-                                    پایین ترین قیمت
-                                </option>
-                                <option>
-                                    در انبار
-                                </option>
-                            </select>
-                        </p>
-                    </div>
+                    <form method="get" action="{% url 'home_page' %}" onchange="this.submit()">
+                        <label for="sort">مرتب سازی بر اساس قیمت:</label>
+                        <select name="sort" id="sort">
+                            <option value="asc" {% if request.GET.sort == "asc" %}selected{% endif %}>پایین‌ترین قیمت</option>
+                            <option value="desc" {% if request.GET.sort == "desc" %}selected{% endif %}>بالاترین قیمت</option>
+                        </select>
+                    </form>
                     <div class="show">
                         <p>
                             نشان می دهد:
@@ -180,7 +141,6 @@
                                 <option>12</option>
                                 <option>16</option>
                                 <option>20</option>
-                                <option>در انبار</option>
                             </select>
                         </p>
                     </div>
