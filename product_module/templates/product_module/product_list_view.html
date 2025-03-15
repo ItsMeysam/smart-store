@@ -1,0 +1,182 @@
+{% extends 'shared/_layout.html' %}
+{% load thumbnail %}
+
+{% block title %}محصولات{% endblock %}
+
+
+{% block content %}
+    <div class="wrap">
+        <div class="main">
+            <div class="content">
+                <div class="content_top">
+                    <div class="heading">
+                        <h3>Feature Products</h3>
+                    </div>
+                    <div class="sort">
+                        <p>
+                            مرتب سازی بر اساس:
+
+                            <select>
+                                <option>
+                                    پایین ترین قیمت
+                                </option>
+                                <option>
+                                    بالاترین قیمت
+                                </option>
+                                <option>
+                                    پایین ترین قیمت
+                                </option>
+                                <option>
+                                    پایین ترین قیمت
+                                </option>
+                                <option>
+                                    پایین ترین قیمت
+                                </option>
+                                <option>
+                                    در انبار
+                                </option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="show">
+                        <p>
+                            نشان می دهد:
+                            <select>
+                                <option>4</option>
+                                <option>8</option>
+                                <option>12</option>
+                                <option>16</option>
+                                <option>20</option>
+                                <option>در انبار</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="page-no">
+                        <p>تعداد صفحات :</p>
+                        {% if page_obj.has_previous %}
+                            <li><a href="?page={{ page_obj.previous_page_number }}">قبلی</a></li>
+                        {% endif %}
+                        {% for pageNumber in paginator.page_range %}
+                            <li class="{% if page_obj.number == pageNumber %} active {% endif %}">
+                                <a href="?page={{ pageNumber }}">{{ pageNumber }}</a></li>
+                        {% endfor %}
+                        {% if page_obj.has_next %}
+                            <li><a href="?page={{ page_obj.next_page_number }}">بعدی</a></li>
+                        {% endif %}
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="section group">
+                    {% for product in products %}
+                        <div class="grid_1_of_4 images_1_of_4">
+                            <a href="">
+                                {% thumbnail product.image "212x212" crop="center" as im %}
+                                    <img src="{{ im.url }}" alt=""/>
+                                {% endthumbnail %}
+                            </a>
+                            <h2>{{ product.title }}</h2>
+                            <p>{{ product.short_description }}</p>
+                            <p><span class="strike">{{ product.price }}</span><span
+                                    class="price">{{ product.price }}</span></p>
+                            <div class="button"><span><img src="{{ product.image }}" alt=""/><a
+                                    href="preview-3.html"
+                                    class="cart-button">افزودن به سبد خرید</a></span>
+                            </div>
+                            <div class="button"><span><a href="{{ product.get_absolute_url }}"
+                                                         class="details">جزئیات</a></span></div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+                <div class="content_bottom">
+                    <div class="heading">
+                        <h3>
+                            محصولات جدید
+                        </h3>
+                    </div>
+                    <div class="sort">
+                        <p>
+                            مرتب سازی بر اساس:
+
+                            <select>
+                                <option>
+                                    پایین ترین قیمت
+                                </option>
+                                <option>
+                                    بالاترین قیمت
+                                </option>
+                                <option>
+                                    پایین ترین قیمت
+                                </option>
+                                <option>
+                                    پایین ترین قیمت
+                                </option>
+                                <option>
+                                    پایین ترین قیمت
+                                </option>
+                                <option>
+                                    در انبار
+                                </option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="show">
+                        <p>
+                            نشان می دهد:
+
+                            <select>
+                                <option>4</option>
+                                <option>8</option>
+                                <option>12</option>
+                                <option>16</option>
+                                <option>20</option>
+                                <option>در انبار</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="page-no">
+                        <p>
+                            تعداد صفحات:
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li>[<a href="#">بعدی>>></a>]</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="section group">
+                    <div class="grid_1_of_4 images_1_of_4">
+                        <a href="preview-3.html"><img src="static/images/new-pic1.jpg" alt=""/></a>
+                        <div class="discount">
+                            <span class="percentage">40%</span>
+                        </div>
+                        <h2>
+
+                            لورم ایپسوم یا طرح‌نما</h2>
+                        <p><span class="strike">$438.99</span><span class="price">$403.66</span></p>
+                        <div class="button"><span><img src="static/images/cart.jpg" alt=""/><a href="preview-3.html"
+                                                                                               class="cart-button">افزودن به سبد خرید</a></span>
+                        </div>
+                        <div class="button"><span><a href="preview-3.html" class="details">جزئیات</a></span></div>
+                    </div>
+                    <img src="static/images/new-pic3.jpg" alt=""/>
+                    <div class="discount">
+                        <span class="percentage">66%</span>
+                    </div>
+                    <h2>
+
+                        لورم ایپسوم یا طرح‌نما</h2>
+                    <p><span class="strike">$643.22</span><span class="price">$457.88</span></p>
+                    <div class="button"><span><img src="static/images/cart.jpg" alt=""/><a href="#"
+                                                                                           class="cart-button">افزودن به سبد خرید</a></span>
+                    </div>
+                    <div class="button"><span><a href="#" class="details">جزئیات</a></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

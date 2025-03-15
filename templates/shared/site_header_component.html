@@ -1,0 +1,275 @@
+{% load static %}
+
+<div class="header">
+    <div class="header_top">
+        <div class="logo">
+            <a href="{% url 'home_page' %}"><img src="{% static 'images/logo.png' %}" alt=""/></a>
+        </div>
+        <div class="header_top_left">
+            <div class="search_box">
+                <form>
+                    <input type="text" value="
+جستجوی محصولات
+" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit"
+                                                                                                         value="جستجو">
+                </form>
+            </div>
+            <div class="shopping_cart">
+                <div class="cart">
+                    <a href="#" title="View my shopping cart" rel="nofollow">
+                        <strong class="opencart"> </strong>
+                        <span class="cart_title">سبد خرید</span>
+                        <span class="no_product">(خالی)</span>
+                    </a>
+                </div>
+            </div>
+            <div class="languages" title="language">
+                <div id="language" class="wrapper-dropdown" tabindex="1">EN
+                    <strong class="opencart"> </strong>
+                    <ul class="dropdown languges">
+                        <li>
+                            <a href="#" title="Français">
+                                <span><img src="{% static 'images/gb.png' %}" alt="en" width="26" height="26"></span><span
+                                    class="lang">English</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Français">
+                                <span><img src="{% static 'images/au.png' %}" alt="fr" width="26" height="26"></span><span
+                                    class="lang">Français</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Español">
+                                <span><img src="{% static 'images/bm.png' %}" alt="es" width="26" height="26"></span><span
+                                    class="lang">Español</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Deutsch">
+                                <span><img src="{% static 'images/ck.png' %}" alt="de" width="26" height="26"></span><span
+                                    class="lang">Deutsch</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="$" title="Russian">
+                                <span><img src="{% static 'images/cu.png' %}" alt="ru" width="26" height="26"></span><span
+                                    class="lang">Russian</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    function DropDown(el) {
+                        this.dd = el;
+                        this.initEvents();
+                    }
+
+                    DropDown.prototype = {
+                        initEvents: function () {
+                            var obj = this;
+
+                            obj.dd.on('click', function (event) {
+                                $(this).toggleClass('active');
+                                event.stopPropagation();
+                            });
+                        }
+                    }
+
+                    $(function () {
+
+                        var dd = new DropDown($('#language'));
+
+                        $(document).click(function () {
+                            // all dropdowns
+                            $('.wrapper-dropdown').removeClass('active');
+                        });
+
+                    });
+
+                </script>
+            </div>
+            <div class="login">
+                <span><a href="{% url 'login_page' %}"><img src="images/login.png" alt=""
+                                                            title="login"/></a></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="menu">
+        <ul id="dc_mega-menu-orange" class="dc_mm-orange">
+            <li><a href="{% url 'home_page' %}">صفحه اصلی</a></li>
+            <li><a href="{% url 'product_list' %}">محصولات</a>
+                <ul>
+                    <li><a href="products.html">
+                        گوشی های تلفن همراه
+                    </a>
+                        <ul>
+                            <li><a href="preview-2.html">
+                                محصول 1
+                            </a></li>
+                            <li><a href="preview-3.html">
+                                محصول 2</a></li>
+                            <li><a href="#">
+                                محصول 3</a></li>
+                            <li><a href="#">
+                                محصول 4</a></li>
+                            <li><a href="preview-6.html">
+                                محصول 5</a></li>
+                            <li><a href="#">
+                                محصول 6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html">دسکتاپ</a>
+                        <ul>
+                            <li><a href="preview.html">
+                                محصول 1
+                            </a></li>
+                            <li><a href="preview-5.html">
+                                محصول 2</a></li>
+                            <li><a href="preview-3.html">
+                                محصول 3</a></li>
+                            <li><a href="#">
+                                محصول 4</a></li>
+                            <li><a href="#">
+                                محصول 5</a></li>
+                            <li><a href="#">
+                                محصول 6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html">لپ تاپ</a>
+                        <ul>
+                            <li><a href="preview-2.html">
+                                محصول 10
+                            </a></li>
+                            <li><a href="preview-5.html">
+                                محصول 11</a></li>
+                            <li><a href="#">
+                                محصول 12</a></li>
+                            <li><a href="#">
+                                محصول 13</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">لوازم جانبی</a>
+                        <ul>
+                            <li><a href="#">
+                                محصول 14
+                            </a></li>
+                            <li><a href="#">
+                                محصول 15</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">نرم افزار</a>
+                        <ul>
+                            <li><a href="#">محصول 16</a></li>
+                            <li><a href="#">محصول 17</a></li>
+                            <li><a href="#">محصول 18</a></li>
+                            <li><a href="#">محصول 19</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">
+                        ورزش & تناسب اندام
+                    </a>
+                        <ul>
+                            <li><a href="#">محصول 16</a></li>
+                            <li><a href="#">محصول 17</a></li>
+                            <li><a href="#">محصول 18</a></li>
+                            <li><a href="#">محصول 19</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">کفش</a>
+                        <ul>
+                            <li><a href="#">محصول 16</a></li>
+                            <li><a href="#">محصول 17</a></li>
+                            <li><a href="#">محصول 18</a></li>
+                            <li><a href="#">محصول 19</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">جواهرات و اشیای قیمتی</a>
+                        <ul>
+                            <li><a href="#">محصول 16</a></li>
+                            <li><a href="#">محصول 17</a></li>
+                            <li><a href="#">محصول 18</a></li>
+                            <li><a href="#">محصول 19</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">لباس</a>
+                        <ul>
+                            <li><a href="#">محصول 16</a></li>
+                            <li><a href="#">محصول 17</a></li>
+                            <li><a href="#">محصول 18</a></li>
+                            <li><a href="#">محصول 19</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">
+                        دکور خانه & آشپزخانه
+                    </a>
+                        <ul>
+                            <li><a href="#">محصول 16</a></li>
+                            <li><a href="#">محصول 17</a></li>
+                            <li><a href="#">محصول 18</a></li>
+                            <li><a href="#">محصول 19</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">
+                        زیبایی & بهداشت و درمان
+                    </a>
+                        <ul>
+                            <li><a href="#">محصول 16</a></li>
+                            <li><a href="#">محصول 17</a></li>
+                            <li><a href="#">محصول 18</a></li>
+                            <li><a href="#">محصول 19</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">
+                        اسباب بازی های کودکان و نوجوانان & نوزادان
+                    </a>
+                        <ul>
+                            <li><a href="#">محصول 16</a></li>
+                            <li><a href="#">محصول 17</a></li>
+                            <li><a href="#">محصول 18</a></li>
+                            <li><a href="#">محصول 19</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="{% url 'home_page' %}">برندها</a>
+                <ul>
+                    <li><a href="products.html">
+                        نام تجاری 1
+                    </a></li>
+                    <li><a href="products.html">
+                        نام تجاری 2
+                    </a></li>
+                    <li><a href="products.html">
+                        نام تجاری 3
+                    </a></li>
+                    <li><a href="#">
+                        نام تجاری 4
+                    </a></li>
+                    <li><a href="#">
+                        نام تجاری 5
+                    </a></li>
+                    <li><a href="#">
+                        نام تجاری 6
+                    </a></li>
+                    <li><a href="#">
+                        نام تجاری 7
+                    </a></li>
+                    <li><a href="#">
+                        نام تجاری 8
+                    </a></li>
+                    <li><a href="#">>نام تجاری 9</a></li>
+                    <li><a href="#">نام تجاری 10</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'about_us' %}">درباره ما</a></li>
+            <li><a href="{% url 'popular_question' %}">
+                سوالات متداول
+            </a></li>
+            <li><a href='{% url "contact_page" %}'>تماس با ما</a></li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>

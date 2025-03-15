@@ -1,0 +1,104 @@
+{% extends 'shared/_layout.html' %}
+
+{% block title %}
+    ورود به حساب
+{% endblock %}
+
+
+{% block content %}
+    <body>
+    <div class="wrap" style="overflow-x: hidden">
+        <div class="header">
+            <div class="header_bottom">
+                <div class="header_bottom_right">
+                    <div class="section group">
+                        <div class="listview_1_of_2 images_1_of_2">
+                            <div class="listimg listimg_2_of_1">
+                                <a href="preview.html"> <img src="images/pic4.png" alt=""></a>
+                            </div>
+                            <div class="text list_2_of_1">
+                                <h2>آی فون</h2>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                                <div class="button"><span><a href="preview.html">افزودن به سبد خرید</a></span></div>
+                            </div>
+                        </div>
+                        <div class="listview_1_of_2 images_1_of_2">
+                            <div class="listimg listimg_2_of_1">
+                                <a href="preview-5.html"><img src="images/pic3.png" alt=""></a>
+                            </div>
+                            <div class="text list_2_of_1">
+                                <h2>سامسونگ</h2>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                                <div class="button"><span><a href="preview-5.html">افزودن به سبد خرید</a></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section group">
+                        <div class="listview_1_of_2 images_1_of_2">
+                            <div class="listimg listimg_2_of_1">
+                                <a href="preview-3.html"> <img src="images/pic3.jpg" alt=""></a>
+                            </div>
+                            <div class="text list_2_of_1">
+                                <h2>Acer</h2>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                                <div class="button"><span><a href="preview-3.html">افزودن به سبد خرید</a></span></div>
+                            </div>
+                        </div>
+                        <div class="listview_1_of_2 images_1_of_2">
+                            <div class="listimg listimg_2_of_1">
+                                <a href="preview-6.html"><img src="images/pic1.png" alt=""></a>
+                            </div>
+                            <div class="text list_2_of_1">
+                                <h2>Canon</h2>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                                <div class="button"><span><a href="preview-6.html">افزودن به سبد خرید</a></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="header_bottom_left_images">
+
+                    <!-- FlexSlider -->
+                    <section class="slider" dir=ltr>
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li><img src="static/images/1.jpg" alt=""/></li>
+                                <li><img src="static/images/2.jpg" alt=""/></li>
+                                <li><img src="static/images/3.jpg" alt=""/></li>
+                                <li><img src="static/images/4.jpg" alt=""/></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- FlexSlider -->
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="content">
+                <div class="login_panel">
+                    <h3>
+                        مشتریان موجود
+                    </h3>
+                    <p>
+                        با استفاده از فرم زیر وارد شوید.
+                    </p>
+                    <form action="{% url 'login_page' %}" method="post" id="member">
+                        {% csrf_token %}
+                        {{ login_form }}
+                        
+                        <p class="note">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است<a href="#">اینجا</a></p>
+                        <div class="buttons">
+                            <div>
+                                <button class="grey">ورود به برنامه</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
